@@ -80,7 +80,7 @@ knit_print(df_summary)
 
 Zadbanie o to, aby wykresy były niesamowicie eleganckie:
 ```{r}
-options(repr.plot.width=24, repr.plot.height=16)
+options(repr.plot.width=30, repr.plot.height=20)
 ```
 Tworzenie eleganckich wykresów rozkładu zmiennych: warto zwrócić uwagę na wykorzystanie density-plotu dla danych ciągłych i barplota dla danych dyskretnych. Uwzględniono - dla kompletności - rozkład krajów i lat.
 ```{r}
@@ -93,7 +93,7 @@ for (x in colnames(data)){
         print(data %>%
               filter(!is.na(data[[x]])) %>%
               ggplot(aes_string(x=x)) + geom_bar() + 
-                  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, size = 6, hjust = 1)))
+                  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, size = 2, hjust = 1)))
 }
 ```
 
@@ -105,7 +105,7 @@ for (x in colnames(data)){
     plot_data <- data %>% filter(!is.na(data[[x]]) & !is.na(data[['Life.expectancy']]))
     plot_itself <- plot_data %>% ggplot(aes_string(x=x, y='Life.expectancy')) + geom_point()
     if (x == 'Country')
-        plot_itself <- plot_itself + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, size = 6, hjust = 1))
+        plot_itself <- plot_itself + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, size = 2, hjust = 1))
     print(plot_itself)
 }
 ```
@@ -232,7 +232,7 @@ summary(lm_death)
 
 pred <- predict(lm_death, test)
 ```
-Można zauważyć, że - z pominięciem kraju - najlepszymi predyktorami zmiennej decyzyjnej były zmienne: Schooling, Hepatitis.B, Status, Adult.Mortality, Diphtheria, HIV.AIDS i Income.composition.of.resources - są to też zmienne, które zostały wskazane jako dobrze skorelowane ze zmienną decyzyjną w pokazanej heatmapie. Zapewne nie można argumentować o wpływie tych zmiennych na oczekiwaną długość życia, ponieważ korelacja może informować jedynie o związku, ale nie o przyczynowości.
+Można zauważyć, że - z pominięciem kraju - najlepszymi predyktorami zmiennej decyzyjnej były zmienne: Schooling, Hepatitis.B, Status, Adult.Mortality, Diphtheria, HIV.AIDS i Income.composition.of.resources - są to też zmienne, które zostały wskazane jako dobrze skorelowane ze zmienną decyzyjną w pokazanej heatmapie. Wszystkie te zmienne były istotne przy przyjęciu p-wartości rzędu <0.01. Część zmiennych w praktyce nie było statystycznie ważnych nawet przy p-wartości równej 0.5 - w szczególności rok i wyszczepialność odry. Nie można argumentować o wpływie tych zmiennych na oczekiwaną długość życia, ponieważ korelacja może informować jedynie o związku, ale nie o przyczynowości.
 
 Wartość \(rmse\):
 ```{r}
