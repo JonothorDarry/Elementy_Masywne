@@ -238,4 +238,4 @@ Wartość \(rmse\):
 ```{r}
 sqrt(mean((pred - test$Life.expectancy)^2))
 ```
-Po przeskalowaniu problematycznych wartości BMI i części szczepień wartości \(rmse\) spadły z 4.11 do 3.8. Przy wykorzystaniu kraju jako predyktora spadłyby jeszcze bardziej (poniżej 2), natomiast jego wykorzystanie można potraktować jako problematyczne; w praktyce można traktować kraj jako pewne ID i podzielić dane kraj po kraju do danych treningowych albo testowych - wtedy predyktor bardzo silnie zależny od kraju kompletnie by sobie nie radził.
+Po przeskalowaniu problematycznych wartości BMI i części szczepień wartości \(rmse\) spadły z 4.11 do 3.8. Przy wykorzystaniu kraju jako predyktora spadłyby jeszcze bardziej (poniżej 2), natomiast jego wykorzystanie można potraktować jako problematyczne; w praktyce można traktować kraj jako pewne ID i podzielić dane kraj po kraju do danych treningowych albo testowych - wtedy predyktor bardzo silnie zależny od kraju kompletnie by sobie nie radził w przypadku, gdyby do zbioru treningowego nie należała żadna obserwacja z tego kraju, albo obserwacje odstające - pojawia się problem rzadkości danych.
