@@ -1,0 +1,51 @@
+Programowanie w R - projekt
+
+Celem projektu jest określenie czynników wpływających na długość życia w poszczególnych krajach.
+Opis danych
+
+Średnia długość życia różni się w zależności od kraju. W podanym zbiorze danych zebrano informacje o warunkach mogących wpływać na długość życia w poszczególnych krajach w latach 2000-2012.
+
+Kolejne kolumny w zbiorze danych to:
+
+    Country: kraj (niektóre nazwy krajów zawarte są w cudzysłowach, ustaw quote=‘"’ przy wczytywaniu),
+    Year: rok,
+    Status: status kraju: “Developing” dla krajów rozwijających się i “Developed” dla krajów rozwiniętych,
+    Life expectancy : oczekiwana długość życia w momencie urodzenia w danym kraju w danym roku,
+    Adult Mortality: liczba zgonów wśród dorosłych (liczba śmierci między 15 a 60 rokiem życia na 1000 mieszkańców)
+    infant deaths: liczba zgonów wśród dzieci na 1000 mieszkańców,
+    Alcohol: spożycie alkoholu (w litrach na mieszkańca powyżej 15 r.ż.),
+    percentage expenditure: procent PKB przeznaczony na ochronę zdrowia,
+    Hepatitis B: procent dzieci 1-rocznych zaszczepionych przeciw WZW B,
+    Measles: liczba zgłoszonych przypadków odry na 1000 mieszkańców,
+    BMI: średnia wartość współczynnika BMI wśród populacji,
+    under-five deaths: liczba zgonów dzieci poniżej 5 r.ż na 1000 mieszkańców,
+    Polio: procent 1-rocznych dzieci zaszczepionych przeciw Polio,
+    Total expenditure: procent rządowych wydatków na ochronę zdrowia w stosunku do wszystich wydatków w budżecie,
+    Diphtheria: procent dzieci 1-rocznych zaszczepionych na błonicę, tężec i krztusiec,
+    HIV/AIDS: liczba zgonów z powodu zakażenia HIV/AIDS wśród dzieci do 4 r.ż na 1000 żywych urodzeń,
+    GDP: PKB na mieszkańca (w USD),
+    Population: liczba mieszkańców kraju,
+    thinness 10-19 years: procent osób w wieku 10-19 lat z niedowagą,
+    thinness 5-9 years: procent dzieci w wieku 5-9 lat z niedowagą,
+    Income composition of resources: Wskaźnik określający produktywność żużywania zasobów (0-1)
+    Schooling: średnia liczba lat edukacji.
+
+Wymagania
+
+Raport z analizy danych powinien być napisany z wykorzystaniem języka RMarkdown i paczki knitr. Źródła i pliki wynikowe powinny zostać udostępnione w ramach konta GitHub studenta. Jeśli to możliwe, warto aby raport można było oglądać bezpośrednio ze strony GitHub. W tym celu należy zapisywać do repozytorium pliki *.md i potrzebne zależności.
+
+Na początku pliku powinna znajdować się automatycznie wypełniona data generacji dokumentu oraz spis treści pozwalający przejść do najważniejszych sekcji. Ponadto raport powinien zaczynać się od rozdziału podsumowującego całą analizę, streszczającego najważniejsze spostrzeżenia analityka. Należy tu podkreślić, że właśnie zrozumienie danych, czytelna prezentacja wyników oraz stosowanie się do podstawowych zasad wizualizacji danych będą, obok technicznej strony raportu, podstawą oceny z projektu. Po wstępie, raport powinien zawierać następujące elementy:
+
+    1) Kod wyliczający wykorzystane biblioteki.
+    2) Kod zapewniający powtarzalność wyników przy każdym uruchomieniu raportu na tych samych danych.
+    3) Kod pozwalający wczytać dane z pliku.
+    4) Kod przetwarzający brakujące dane.
+    5) Sekcję podsumowującą rozmiar zbioru i podstawowe statystyki.
+    6) Szczegółową analizę wartości atrybutów (np. poprzez prezentację rozkładów wartości).
+    7) Sekcję sprawdzającą korelacje między zmiennymi; sekcja ta powinna zawierać jakąś formę graficznej prezentacji korelacji.
+    8) Interaktywny wykres prezentujący średnią długość życia dla poszczególnych krajów w zależności od roku (w wersji html użytkownik).
+    9) Sekcję próbującą stworzyć regresor przewidujący oczekiwaną długość życia (w tej sekcji należy wykorzystać wiedzę z pozostałych punktów oraz wykonać dodatkowe czynności, które mogą poprawić trafność predykcji); dobór parametrów modelu oraz oszacowanie jego skuteczności powinny zostać wykonane za pomocą techniki podziału zbioru na dane uczące, walidujące i testowe; trafność regresji powinna zostać oszacowana na podstawie miar R2R2 i RMSERMSE.
+    10) Analizę ważności atrybutów najlepszego znalezionego modelu regresji. Analiza ważności atrybutów powinna stanowić próbę odpowiedzi na pytanie: co w największym stopniu wpływa na wydłużenie lub skrócenie długości życia.
+
+Jeśli analityk uzna to za stosowne, powyższe punkty mogę być wykonane w innej kolejności. Analityk nie musi, a nawet nie powinien, ograniczać się do powyższych punktów. Wszelkie dodatkowe techniki analizy danych, wizualizacje, spostrzeżenia będą pozytywnie wpływały na ocenę.
+Termin oddania projektu: 16.12.2021
